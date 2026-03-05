@@ -1,6 +1,6 @@
 # Yozakura
 
-Ghostty 视觉配置一键安装工具，包含 Yozakura (dark) + Sakura (light) 主题及排版、毛玻璃、CJK 字体等视觉配置。
+Ghostty 视觉配置 + Claude Code 一键安装工具，包含主题、窗口、排版等 Ghostty 视觉配置及 Claude Code statusline。
 
 ## 安装
 
@@ -21,11 +21,9 @@ npx yozakura --all
 | # | 分组 | 说明 |
 |---|------|------|
 | 1 | 主题 | Yozakura (dark) + Sakura (light) 自动切换 |
-| 2 | 毛玻璃 | 背景透明 + 模糊效果 |
-| 3 | 排版 | 字号 15, 加粗, 行高 +20% |
-| 4 | CJK 字体 | 中文用苹方 (PingFang SC) |
-| 5 | 窗口 | tabs 标题栏, 内边距 16 |
-| 6 | 光标 | 竖条样式, 不闪烁 |
+| 2 | 窗口 | 毛玻璃 + 内边距 + tabs 标题栏 |
+| 3 | 排版 | 字号、加粗、行高、CJK 字体、光标 |
+| 4 | Claude Code | Tab 重命名快捷键 + Statusline |
 
 ## 工作原理
 
@@ -38,3 +36,4 @@ npx yozakura --all
 
 - macOS + [Ghostty](https://ghostty.org/) 已安装
 - Node.js >= 16
+- `jq`（Claude Code statusline 需要）：`brew install jq`
