@@ -53,7 +53,7 @@ const GROUPS = [
 // ── Statusline ──
 
 const STATUSLINE_FIELDS = [
-  { name: '进度条 + 百分比 + token 数', desc: '████░░░░░░ 38% (76k/200k)', always: true },
+  { name: '进度条 + 百分比 + token 数', desc: '████░░░░░░ 38% (76k/200k)' },
   { name: '缓存命中率', desc: 'cache:82%' },
   { name: 'Git 分支', desc: '🌿 main' },
 ];
@@ -134,16 +134,16 @@ async function installStatusline() {
   }
 
   // Ask which fields
-  console.log('\n  Statusline 显示字段：');
-  STATUSLINE_FIELDS.forEach((f, i) => {
-    const tag = f.always ? '（默认）' : '';
-    console.log(`    [${i + 1}] ${f.name.padEnd(20)} ${f.desc} ${tag}`);
-  });
-
   const allFlag = process.argv.includes('--all');
   let selectedFields = STATUSLINE_FIELDS.map((_, i) => i);
 
   if (!allFlag) {
+    console.log('\n  Statusline 显示字段：');
+    STATUSLINE_FIELDS.forEach((f, i) => {
+      const tag = i === 0 ? '（默认）' : '';
+      console.log(`    [${i + 1}] ${f.name.padEnd(20)} ${f.desc} ${tag}`);
+    });
+
     const answer = await ask('  全部显示请直接回车，或输入要显示的编号（如 1,2）：');
     if (answer) {
       const pickFields = new Set();
@@ -152,6 +152,9 @@ async function installStatusline() {
         if (n >= 1 && n <= STATUSLINE_FIELDS.length) pickFields.add(n - 1);
       }
       selectedFields = selectedFields.filter((i) => pickFields.has(i));
+      if (selectedFields.length === 0) {
+        console.log('  ℹ 未选择额外字段，仅显示进度条');
+      }
     }
   }
 
@@ -229,16 +232,16 @@ async function main() {
   const allFlag = process.argv.includes('--all');
 
   console.log('\n✨ Yozakura Theme Installer\n');
-  console.log('可选配置组：');
-  GROUPS.forEach((g, i) => {
-    console.log(`  [${i + 1}] ${g.name.padEnd(8)} ${g.desc}`);
-  });
-  console.log();
 
   // Determine which groups to install
   let pickSet = null;
 
   if (!allFlag) {
+    console.log('可选配置组：');
+    GROUPS.forEach((g, i) => {
+      console.log(`  [${i + 1}] ${g.name.padEnd(8)} ${g.desc}`);
+    });
+    console.log();
     const answer = await ask('全部安装请直接回车，或输入要安装的编号（如 1,3）：');
     if (answer) {
       pickSet = new Set();
