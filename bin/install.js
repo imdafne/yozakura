@@ -15,29 +15,11 @@ const GROUPS = [
     requiresThemes: true,
   },
   {
-    name: '毛玻璃',
-    desc: '背景透明 + 模糊效果',
-    lines: ['background-opacity = 0.88', 'background-blur-radius = 20'],
-  },
-  {
-    name: '排版',
-    desc: '字号 15, 加粗, 行高 +20%',
-    lines: ['font-size = 15', 'font-thicken = true', 'adjust-cell-height = 20%'],
-  },
-  {
-    name: 'CJK字体',
-    desc: '中文用苹方 (PingFang SC)',
-    lines: [
-      'font-codepoint-map = U+4E00-U+9FFF=PingFang SC',
-      'font-codepoint-map = U+3400-U+4DBF=PingFang SC',
-      'font-codepoint-map = U+3000-U+303F=PingFang SC',
-      'font-codepoint-map = U+FF00-U+FFEF=PingFang SC',
-    ],
-  },
-  {
     name: '窗口',
-    desc: 'tabs 标题栏, 内边距 16',
+    desc: '毛玻璃 + 内边距 + tabs 标题栏',
     lines: [
+      'background-opacity = 0.88',
+      'background-blur-radius = 20',
       'window-padding-x = 16',
       'window-padding-y = 16',
       'window-decoration = true',
@@ -45,9 +27,20 @@ const GROUPS = [
     ],
   },
   {
-    name: '光标',
-    desc: '竖条样式, 不闪烁',
-    lines: ['cursor-style = bar', 'cursor-style-blink = false', 'minimum-contrast = 1.0'],
+    name: '排版',
+    desc: '字号、加粗、行高、CJK 字体、光标',
+    lines: [
+      'font-size = 15',
+      'font-thicken = true',
+      'adjust-cell-height = 20%',
+      'font-codepoint-map = U+4E00-U+9FFF=PingFang SC',
+      'font-codepoint-map = U+3400-U+4DBF=PingFang SC',
+      'font-codepoint-map = U+3000-U+303F=PingFang SC',
+      'font-codepoint-map = U+FF00-U+FFEF=PingFang SC',
+      'cursor-style = bar',
+      'cursor-style-blink = false',
+      'minimum-contrast = 1.0',
+    ],
   },
 ];
 
