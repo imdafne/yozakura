@@ -37,3 +37,13 @@ npx yozakura --all
 - macOS + [Ghostty](https://ghostty.org/) 已安装
 - Node.js >= 16
 - `jq`（Claude Code statusline 需要）：`brew install jq`
+
+## Codex Desktop
+
+Yozakura 也提供 Codex Desktop 深色主题，基于原始夜樱配色并针对界面层级和 Diff 做了适配。
+
+1. 打开 Codex Desktop 的 Settings
+2. 进入 Appearance，选择导入主题
+3. 复制并粘贴 [`codex/yozakura-dark.txt`](codex/yozakura-dark.txt) 的完整内容
+
+主题使用 `#1e1e2e` 作为背景、`#f4b8e4` 作为强调色、`#81c8be` 标识新增 Diff、`#b69db8` 标识删除 Diff、`#cba6f7` 标识 Skill。代码高亮使用内置 `catppuccin` 主题。
