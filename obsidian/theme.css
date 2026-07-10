@@ -1,0 +1,391 @@
+/* ============================================================
+   🌸 Yozakura — Obsidian Theme
+   Catppuccin Mocha/Latte base with sakura-tinted palette
+   Dark: 夜樱 (Yozakura)  |  Light: 樱 (Sakura)
+   ============================================================ */
+
+/* ─── Dark Mode: 夜樱 ─── */
+.theme-dark {
+  color-scheme: dark;
+
+  /* Mono RGB endpoints */
+  --mono-rgb-0: 35, 38, 52;
+  --mono-rgb-100: 198, 208, 245;
+
+  /* Accent colors — RGB */
+  --color-red-rgb: 182, 157, 184;
+  --color-green-rgb: 130, 171, 157;
+  --color-blue-rgb: 186, 187, 241;
+  --color-purple-rgb: 202, 158, 230;
+  --color-yellow-rgb: 229, 200, 144;
+  --color-cyan-rgb: 133, 193, 220;
+  --color-orange-rgb: 239, 159, 118;
+  --color-pink-rgb: 244, 184, 228;
+
+  /* Accent colors — hex */
+  --color-red: #b69db8;
+  --color-green: #82ab9d;
+  --color-blue: #babbf1;
+  --color-purple: #ca9ee6;
+  --color-yellow: #e5c890;
+  --color-cyan: #85c1dc;
+  --color-orange: #ef9f76;
+  --color-pink: #f4b8e4;
+
+  /* Base scale: crust → text (Frappé) */
+  --color-base-00: #232634;
+  --color-base-10: #292c3c;
+  --color-base-20: #303446;
+  --color-base-25: #414559;
+  --color-base-30: #51576d;
+  --color-base-35: #626880;
+  --color-base-40: #737994;
+  --color-base-50: #838ba7;
+  --color-base-60: #949cbb;
+  --color-base-70: #a5adce;
+  --color-base-100: #c6d0f5;
+
+  /* Background layers */
+  --background-primary: #303446;
+  --background-primary-alt: #292c3c;
+  --background-secondary: #292c3c;
+  --background-secondary-alt: #232634;
+
+  /* Background modifiers */
+  --background-modifier-hover: rgba(198, 208, 245, 0.075);
+  --background-modifier-form-field: rgba(35, 38, 52, 0.3);
+  --background-modifier-border: #414559;
+  --background-modifier-border-hover: #51576d;
+  --background-modifier-border-focus: #626880;
+  --background-modifier-success: #82ab9d;
+  --background-modifier-success-hover: rgba(130, 171, 157, 0.9);
+  --background-modifier-success-rgb: 130, 171, 157;
+  --background-modifier-error: #b69db8;
+  --background-modifier-error-rgb: 182, 157, 184;
+  --background-modifier-error-hover: rgba(182, 157, 184, 0.9);
+  --background-modifier-message: rgba(35, 38, 52, 0.9);
+  --background-modifier-cover: rgba(41, 44, 60, 0.4);
+
+  /* Text */
+  --text-normal: #c6d0f5;
+  --text-muted: #949cbb;
+  --text-muted-rgb: 148, 156, 187;
+  --text-faint: #a5adce;
+  --text-error: #b69db8;
+  --text-error-hover: rgba(182, 157, 184, 0.8);
+  --text-success: #82ab9d;
+  --text-on-accent: #303446;
+  --text-on-accent-inverted: #c6d0f5;
+
+  /* Highlights */
+  --text-highlight-bg: rgba(229, 200, 144, 0.2);
+  --text-highlight-bg-active: rgba(229, 200, 144, 0.4);
+
+  /* Interactive */
+  --interactive-normal: #414559;
+  --interactive-hover: #51576d;
+  --interactive-accent: #f4b8e4;
+  --interactive-accent-hover: #f6c5ea;
+
+  /* Accent HSL (from #f4b8e4) */
+  --accent-h: 316;
+  --accent-s: 73%;
+  --accent-l: 84%;
+  --color-accent: #f4b8e4;
+  --color-accent-1: #f4b8e4;
+  --color-accent-2: rgba(244, 184, 228, 0.9);
+  --color-accent-hsl: 316, 73%, 84%;
+  --interactive-accent-rgb: 244, 184, 228;
+
+  /* Tag — accent-derived */
+  --tag-color: #f4b8e4;
+  --tag-color-hover: #f6c5ea;
+  --tag-background: rgba(244, 184, 228, 0.1);
+  --tag-background-hover: rgba(244, 184, 228, 0.2);
+  --tag-border-color: rgba(244, 184, 228, 0.15);
+  --tag-border-color-hover: rgba(244, 184, 228, 0.25);
+
+  /* Link */
+  --link-color: #f4b8e4;
+  --link-color-hover: #f6c5ea;
+  --link-external-color: #85c1dc;
+  --link-external-color-hover: #99cde3;
+  --link-unresolved-color: rgba(244, 184, 228, 0.6);
+  --link-unresolved-decoration-color: rgba(244, 184, 228, 0.3);
+
+  /* List / Nav / Checkbox */
+  --list-marker-color: #f4b8e4;
+  --nav-item-color-active: #f4b8e4;
+  --nav-item-background-active: rgba(244, 184, 228, 0.1);
+  --nav-item-background-selected: rgba(244, 184, 228, 0.2);
+  --checkbox-color: #f4b8e4;
+  --checkbox-color-hover: #f6c5ea;
+  --checkbox-border-color: #f4b8e4;
+
+  --interactive-success: #82ab9d;
+
+  /* Modal */
+  --modal-border-color: #414559;
+
+  /* Shadows */
+  --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+    0 2px 4px 0 rgba(35, 38, 52, 0.15),
+    0 1px 1.5px 0 rgba(35, 38, 52, 0.1),
+    0 1px 2px 0 rgba(35, 38, 52, 0.2),
+    0 0 0 0 transparent;
+  --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(255, 255, 255, 0.16),
+    0 2px 3px 0 rgba(35, 38, 52, 0.3),
+    0 1px 1.5px 0 rgba(35, 38, 52, 0.2),
+    0 1px 2px 0 rgba(35, 38, 52, 0.4),
+    0 0 0 0 transparent;
+  --shadow-s: 0px 1px 2px rgba(35, 38, 52, 0.121),
+    0px 3.4px 6.7px rgba(35, 38, 52, 0.179),
+    0px 15px 30px rgba(35, 38, 52, 0.3);
+  --shadow-l: 0px 1.8px 7.3px rgba(35, 38, 52, 0.071),
+    0px 6.3px 24.7px rgba(35, 38, 52, 0.112),
+    0px 30px 90px rgba(35, 38, 52, 0.2);
+
+  /* Headings */
+  --h1-color: #f4b8e4;
+  --h2-color: #babbf1;
+  --h3-color: #ca9ee6;
+  --h4-color: #85c1dc;
+  --h5-color: #82ab9d;
+  --h6-color: #e5c890;
+
+  /* Miscellaneous */
+  --workspace-background-translucent: rgba(35, 38, 52, 0.6);
+  --blockquote-background-color: rgba(35, 38, 52, 0.5);
+  --drag-ghost-background: #c6d0f5;
+  --drag-ghost-text-color: #232634;
+  --nav-indentation-guide-color: #737994;
+  --highlight-mix-blend-mode: none;
+  --titlebar-text-color-focused: var(--interactive-accent);
+  --icon-color-focused: var(--interactive-accent);
+  --embed-block-shadow-hover: none;
+  --tab-stacked-shadow: -8px 0 8px 0 rgba(35, 38, 52, 0.25);
+}
+
+
+/* ─── Light Mode: 樱 ─── */
+.theme-light {
+  color-scheme: light;
+
+  /* Mono RGB endpoints */
+  --mono-rgb-0: 220, 224, 232;
+  --mono-rgb-100: 76, 79, 105;
+
+  /* Accent colors — RGB */
+  --color-red-rgb: 244, 184, 228;
+  --color-green-rgb: 129, 200, 190;
+  --color-blue-rgb: 186, 187, 241;
+  --color-purple-rgb: 202, 158, 230;
+  --color-yellow-rgb: 229, 200, 144;
+  --color-cyan-rgb: 32, 159, 181;
+  --color-orange-rgb: 239, 159, 118;
+  --color-pink-rgb: 232, 143, 191;
+
+  /* Accent colors — hex */
+  --color-red: #f4b8e4;
+  --color-green: #81c8be;
+  --color-blue: #babbf1;
+  --color-purple: #ca9ee6;
+  --color-yellow: #e5c890;
+  --color-cyan: #209fb5;
+  --color-orange: #ef9f76;
+  --color-pink: #e88fbf;
+
+  /* Base scale: crust → text */
+  --color-base-00: #dce0e8;
+  --color-base-10: #e6e9ef;
+  --color-base-20: #eff1f5;
+  --color-base-25: #ccd0da;
+  --color-base-30: #bcc0cc;
+  --color-base-35: #acb0be;
+  --color-base-40: #9ca0b0;
+  --color-base-50: #8c8fa1;
+  --color-base-60: #7c7f93;
+  --color-base-70: #6c6f85;
+  --color-base-100: #4c4f69;
+
+  /* Background layers */
+  --background-primary: #eff1f5;
+  --background-primary-alt: #e6e9ef;
+  --background-secondary: #e6e9ef;
+  --background-secondary-alt: #dce0e8;
+
+  /* Background modifiers */
+  --background-modifier-hover: rgba(76, 79, 105, 0.075);
+  --background-modifier-form-field: rgba(220, 224, 232, 0.3);
+  --background-modifier-border: #bcc0cc;
+  --background-modifier-border-hover: #acb0be;
+  --background-modifier-border-focus: #9ca0b0;
+  --background-modifier-success: #81c8be;
+  --background-modifier-success-hover: rgba(129, 200, 190, 0.9);
+  --background-modifier-success-rgb: 129, 200, 190;
+  --background-modifier-error: #f4b8e4;
+  --background-modifier-error-rgb: 244, 184, 228;
+  --background-modifier-error-hover: rgba(244, 184, 228, 0.9);
+  --background-modifier-message: rgba(220, 224, 232, 0.9);
+  --background-modifier-cover: rgba(0, 0, 0, 0.133);
+
+  /* Text */
+  --text-normal: #4c4f69;
+  --text-muted: #7c7f93;
+  --text-muted-rgb: 124, 127, 147;
+  --text-faint: #6c6f85;
+  --text-error: #f4b8e4;
+  --text-error-hover: rgba(244, 184, 228, 0.8);
+  --text-success: #81c8be;
+  --text-on-accent: #eff1f5;
+  --text-on-accent-inverted: #4c4f69;
+
+  /* Highlights */
+  --text-highlight-bg: rgba(229, 200, 144, 0.2);
+  --text-highlight-bg-active: rgba(229, 200, 144, 0.4);
+
+  /* Interactive */
+  --interactive-normal: #ccd0da;
+  --interactive-hover: #bcc0cc;
+  --interactive-accent: #ca9ee6;
+  --interactive-accent-hover: #b98eda;
+
+  /* Accent HSL (from #ca9ee6) */
+  --accent-h: 277;
+  --accent-s: 59%;
+  --accent-l: 76%;
+  --color-accent: #ca9ee6;
+  --color-accent-1: #ca9ee6;
+  --color-accent-2: rgba(202, 158, 230, 0.9);
+  --color-accent-hsl: 277, 59%, 76%;
+  --interactive-accent-rgb: 202, 158, 230;
+
+  /* Tag — accent-derived */
+  --tag-color: #ca9ee6;
+  --tag-color-hover: #b98eda;
+  --tag-background: rgba(202, 158, 230, 0.1);
+  --tag-background-hover: rgba(202, 158, 230, 0.2);
+  --tag-border-color: rgba(202, 158, 230, 0.15);
+  --tag-border-color-hover: rgba(202, 158, 230, 0.25);
+
+  /* Link */
+  --link-color: #ca9ee6;
+  --link-color-hover: #b98eda;
+  --link-external-color: #209fb5;
+  --link-external-color-hover: #1a8999;
+  --link-unresolved-color: rgba(202, 158, 230, 0.6);
+  --link-unresolved-decoration-color: rgba(202, 158, 230, 0.3);
+
+  /* List / Nav / Checkbox */
+  --list-marker-color: #ca9ee6;
+  --nav-item-color-active: #ca9ee6;
+  --nav-item-background-active: rgba(202, 158, 230, 0.1);
+  --nav-item-background-selected: rgba(202, 158, 230, 0.2);
+  --checkbox-color: #ca9ee6;
+  --checkbox-color-hover: #b98eda;
+  --checkbox-border-color: #ca9ee6;
+
+  --interactive-success: #81c8be;
+
+  /* Modal */
+  --modal-border-color: #ccd0da;
+
+  /* Shadows */
+  --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+    0 2px 4px 0 rgba(220, 224, 232, 0.15),
+    0 1px 1.5px 0 rgba(220, 224, 232, 0.1),
+    0 1px 2px 0 rgba(220, 224, 232, 0.2),
+    0 0 0 0 transparent;
+  --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(255, 255, 255, 0.16),
+    0 2px 3px 0 rgba(220, 224, 232, 0.3),
+    0 1px 1.5px 0 rgba(220, 224, 232, 0.2),
+    0 1px 2px 0 rgba(220, 224, 232, 0.4),
+    0 0 0 0 transparent;
+  --shadow-s: 0px 1px 2px rgba(220, 224, 232, 0.121),
+    0px 3.4px 6.7px rgba(220, 224, 232, 0.179),
+    0px 15px 30px rgba(220, 224, 232, 0.3);
+  --shadow-l: 0px 1.8px 7.3px rgba(220, 224, 232, 0.071),
+    0px 6.3px 24.7px rgba(220, 224, 232, 0.112),
+    0px 30px 90px rgba(220, 224, 232, 0.2);
+
+  /* Headings */
+  --h1-color: #ca9ee6;
+  --h2-color: #babbf1;
+  --h3-color: #e88fbf;
+  --h4-color: #209fb5;
+  --h5-color: #81c8be;
+  --h6-color: #e5c890;
+
+  /* Miscellaneous */
+  --workspace-background-translucent: rgba(220, 224, 232, 0.6);
+  --blockquote-background-color: rgba(220, 224, 232, 0.5);
+  --drag-ghost-background: #4c4f69;
+  --drag-ghost-text-color: #dce0e8;
+  --nav-indentation-guide-color: #9ca0b0;
+  --highlight-mix-blend-mode: none;
+  --titlebar-text-color-focused: var(--interactive-accent);
+  --icon-color-focused: var(--interactive-accent);
+  --embed-block-shadow-hover: none;
+  --tab-stacked-shadow: -8px 0 8px 0 rgba(220, 224, 232, 0.25);
+}
+
+
+/* ─── Base Styles ─── */
+
+/* Code blocks */
+.theme-dark pre[class*="language-"],
+.theme-dark code[class*="language-"],
+.theme-dark .HyperMD-codeblock {
+  background-color: #292c3c;
+}
+
+.theme-light pre[class*="language-"],
+.theme-light code[class*="language-"],
+.theme-light .HyperMD-codeblock {
+  background-color: #e6e9ef;
+}
+
+/* Inline code */
+.theme-dark :not(pre) > code {
+  background-color: #414559;
+  color: #f4b8e4;
+}
+
+.theme-light :not(pre) > code {
+  background-color: #ccd0da;
+  color: #ca9ee6;
+}
+
+/* Selection */
+.theme-dark ::selection {
+  background-color: rgba(244, 184, 228, 0.2);
+}
+
+.theme-light ::selection {
+  background-color: rgba(202, 158, 230, 0.2);
+}
+
+/* Scrollbar */
+.theme-dark ::-webkit-scrollbar-thumb {
+  background-color: #51576d;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #626880;
+}
+
+.theme-dark ::-webkit-scrollbar-track {
+  background-color: #303446;
+}
+
+.theme-light ::-webkit-scrollbar-thumb {
+  background-color: #bcc0cc;
+}
+
+.theme-light ::-webkit-scrollbar-thumb:hover {
+  background-color: #acb0be;
+}
+
+.theme-light ::-webkit-scrollbar-track {
+  background-color: #eff1f5;
+}
