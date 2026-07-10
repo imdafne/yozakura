@@ -1,0 +1,20 @@
+{
+  "codeThemeId": "catppuccin",
+  "theme": {
+    "accent": "#f4b8e4",
+    "contrast": 58,
+    "fonts": {
+      "code": null,
+      "ui": null
+    },
+    "ink": "#cdd6f4",
+    "opaqueWindows": false,
+    "semanticColors": {
+      "diffAdded": "#81c8be",
+      "diffRemoved": "#b69db8",
+      "skill": "#cba6f7"
+    },
+    "surface": "#1e1e2e"
+  },
+  "variant": "dark"
+}
